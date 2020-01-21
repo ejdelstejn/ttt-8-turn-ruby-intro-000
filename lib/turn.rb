@@ -30,9 +30,7 @@ def valid_move?(array, index)
 end
 
 def move(board, index, token = 'X')
-  if valid_move?(board, index)
-    board[index] = token
-  end
+  board[index] = token
 end
 
 def turn(board)
@@ -41,7 +39,6 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board,index)
     move(board, index, token = 'X')
-    display_board(board)
   else
     puts 'Try again!'
     turn(board)
