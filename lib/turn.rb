@@ -40,11 +40,10 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board,index)
-    puts 'valid move'
     move(board, index, token = 'X')
     display_board(board)
    else
-    puts 'try again'
+    puts 'Try again!'
     turn(board)
   end
   display_board(board)
